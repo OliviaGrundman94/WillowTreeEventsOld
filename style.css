@@ -1,0 +1,49 @@
+@import url("components/cards.css");
+@import url("components/banner.css");
+@import url("components/navbar.css");
+/* @import url("components/.css"); */
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: #A4C3B2;
+}
+
+.button{
+    background-color: #A4C3B2;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 40px; 
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: #A4C3B2 ;
+    color: white;
+}
+
+.testimonials-card{
+    padding: 0px 40px;
+    margin: 0;
+}
+
+.testimonials-home h2{
+    padding: 20px 40px 10px 40px;
+    margin: 0;
+}
+
+.testimonials-home h4{
+    margin: 0;
+    padding: 19px 0px ;
+}
+
+.testimonials-home p{
+    font-size: 0.75rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #A4C3B2;
+    margin: 0;
+}
