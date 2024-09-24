@@ -1,31 +1,372 @@
-@import url("components/cards.css");
-@import url("components/banner.css");
-@import url("components/navbar.css");
-/* @import url("components/.css"); */
+:root{
 
-body {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    color: #A4C3B2;
+--header-height: 3.5rem;
+
+
+/* colours */
+--title-color: white;
+--text-color: #4eb97e;
+--text-color-light: #4eb97e;
+--body-color: white;
+--container-color: hsl(0,0%,8%);
+
+
+/* FONT AND TYPOGRAPHY */
+--body-font: "Playfair Display", serif;
+--second-font: "Playfair Display", serif;
+--biggest-font-size: 2.75rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: .938rem;
+--small-font-size: 0.813rem;
+--smaller-font-size: 0.75rem;
+
+/* font weight */
+--font-regular: 300;
+--font-medium: 400;
+--font-semi-bold: 500;
+
+    /* Z  */
+--z-tooltip: 10;
+--z-fixed: 100;
 }
 
+/* ---------------------RESPONSIVE TYPOGRAPHY------------------------- */
+@media screen and (min-width: 1152px){
+    :root{
+        --biggest-font-size: 5.5rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+/* ---------------------BASE------------------------- */
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body, button, input{
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+}
+
+body{
+    background-color:white;
+}
+
+button, input{
+    outline: none;
+    border: none;
+}
+
+h1, h2, h3, h4{
+    color:#4eb97e;
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------------------REUSABLE CSS CLASSES---------------------- */
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 0;
+}
+
+.section{
+    padding-block: 6rem 1rem;
+}
+
+.services_title{
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.main{
+    overflow: hidden;
+}
+
+/* ---------------------NAV BAR------------------------- */
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo{
+    width: 7rem;
+    height: 100%;
+}
+
+.nav_toggle, nav_close{
+    display: flex;
+    font-size: 1.25rem;
+    color: white;
+    cursor: pointer;
+
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px){
+    .nav_menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: light hsla(0, 0%, 0%, .3);
+        width: 100%;
+        padding-block: 4rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur();
+        transition: top 0.4s;
+    }
+}
+
+.nav_list{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav_link{
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+}
+
+.nav_close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+/* Show menun */
+.show-menu{
+    top: 0;
+}
+/* add blur to header */
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(0, 0% 0%, 0.3);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur();
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+/* --------------------HOME PAGE-------------------------- */
+.home{
+    position: relative;
+}
+
+.home_bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 675px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home_shadow{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 725px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3) 75%,
+                         rgba(0, 0, 0, 0.3) 91%); */
+    background: linear-gradient(180deg,
+                hsla(0, 0%, 100%, 0) 75%,
+                hsl(0, 0%, 100%) 91%); 
+    /* I WANT THE BAKCGROUDN IMAGE TO BE DARKER OVERLAY but i aqlso want it to fade out to white */
+}
+
+
+.home_container{
+    position: relative;
+    padding-top: 10px;
+    row-gap: 1rem;
+}
+
+
+.home_data{
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+.home_subtitle{
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+
+.home_title{
+    font-size: var(--biggest-font-size);
+    color: var(--title-color);
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.home_description{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    margin-bottom: 2rem;
+}
+
+.home_cards{
+    /* margin-top: 6rem; */
+    grid-template-columns:  240px;
+    justify-content: center;;
+}
+
+.home_card{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home_card-img{
+    transition: transform 0.4s;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+/* 
+.home_card-shadow{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg,
+                hsla(0, 0%, 0%, 0) 50%,
+                hsl(0, 0%, 0%)125%);       
+} */
+
+.home_card-title{
+    font-size: var(--h3-font-size);
+    position:absolute;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+}
+
+/* THIS ISNT WORKING  */
+.home_card_img:hover{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg,
+                hsla(0, 0%, 0%, 0) 50%,
+                hsl(0, 0%, 0%)125%); 
+}
+
+
+
+/* -------------------button ================= */
 .button{
     background-color: #A4C3B2;
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 40px; 
-    font-size: 0.7rem;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+    display:inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
     text-decoration: none;
     color: white;
 }
 
-.button:hover{
-    background-color: #A4C3B2 ;
+.button i{
+    font-size: var(--normal-font-size);
+    transition: transform 0.4;
+}
+
+.button:hover i{
+    background-color: #A4C3B2;
     color: white;
 }
 
+
+
+
+
+/* ====================  TESTIMONIALS HOME  =============================== */
+
+
+.testimonials_cards{
+    margin-left: 2rem;
+}
+
+.testimonials_title{
+    text-align: left;
+    font-size: 2rem;
+    /* margin-top: 100px; */
+    margin-top: -2rem;
+}
+
+.testimonials_name{
+    padding:25px 0px 20px 0px;
+}
+
+.testimonials_description{
+    font-size: var(--smaller-font-size);
+}
+/* 
 .testimonials-card{
     padding: 0px 40px;
     margin: 0;
@@ -45,5 +386,144 @@ body {
     font-size: 0.75rem;
     padding-bottom: 20px;
     border-bottom: 1px solid #A4C3B2;
+    margin: 0; */
+
+/* ============ */
+/* --------------------banner-------------------------- */
+
+
+/* .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)), 
+    url("../images/homepage1.jpg");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 8rem;
+    padding: 150px 0;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  }
+
+  .banner h1 {
+    padding: 0px 40px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  
+  .banner h3 {
+    padding: 0px 40px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+
+  .banner p {
+    padding: 10px 40px 20px;
+    font-size: 0.8rem;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  } */
+  
+
+
+/* --------------------cards-------------------------- */
+/* .cards {
+    padding: 0px 40px;
+}
+
+.cards h2 {
+    text-align: left;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #A4C3B2; 
+    overflow: hidden;
+    text-align: center;
+    flex: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+
+.card-img img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 5px; 
+}
+
+.card-info h4 {
+    font-size: 1rem;
+    font-weight: 200;
     margin: 0;
 }
+
+
+.card:hover{
+    background-color: #A4C3B2;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.card:hover .card-img img{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+} */
+
+
+
+/* Media Query for responsive design */
+/* @media (max-width: 480px) { 
+    .cards-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-img img {
+        height: 6rem;
+    }
+}
+
+
+
+
+
+
+
+} */
+/* ---------------------------------------------- */
+/* 
+} */
+
+/* ------------------CARD---------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+----------------------------------------------
