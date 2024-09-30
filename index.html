@@ -7,35 +7,43 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+        
+        
+        
         <title>Willow Tree Events</title>
     </head>
     <body>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav_logo">
-                    <img src="./images/logo/WillowTreeLogoWhite.png" alt="Logo">
+                <a href="index.html" class="nav_logo">
+                    <img src="./images/logo/WillowTreeLogo_White_NoBackground.png" alt="Logo">
                 </a>
-
                 <div class="nav_menu" id="nav-menu">
                     <ul class="nav_list">
                         <li class="nav_item">
-                            <a href="#about" class="nav_link">About</a>
+                            <a href="about.html" class="nav_link">About</a>
                         </li>
-
-                        <li class="nav_item"></li>
-                            <a href="#services" class="nav_link">Services</a>
+                        <li class="nav_item dropdown">
+                            <a href="javascript:void(0)" class="dropbtn nav_link">Services</i></a>
+                            <div class="dropdown-content">
+                                <a href="weddings.html">Weddings</a>
+                                <a href="privatecelebrations.html">Private Celebrations</a>
+                                <a href="corporateevents.html">Corporate Events</a>
+                            </div>
                         </li>
-
-                        <li class="nav_item"></li>
-                            <a href="#testimonials" class="nav_link">Testimonials</a>
+                        <li class="nav_item">
+                            <a href="testimonials.html" class="nav_link">Testimonials</a>
                         </li>
-
-                        <li class="nav_item"></li>
-                            <a href="#enquiries" class="nav_link">Enquiries</a>
+                        <li class="nav_item">
+                            <a href="enquiries.html" class="nav_link">Enquiries</a>
                         </li>
+                        
                     </ul>
-                    
                     <div class="nav_close" id="nav-close">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
@@ -43,8 +51,10 @@
                 <div class="nav_toggle" id="nav-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-            </nav>      
+            </nav>
+            
         </header>
+        
 
         <main class="main">
 
@@ -58,99 +68,154 @@
                             Crafting unforgettable celebrations
                         </h1>
                         <h3 class="home_subtitle">
-                            Where your vision meets our expertise
+                            Whether celebrating a big birthday milestone or hosting an intimate dinner, Willow Tree ensures our personalised and authentic approach each and every time. Along with your vision and our expertise, we guarantee a bespoke experience exceeding all expectations, leaving you free to enjoy every moment
                         </h3>
-                        <p class="home_description">
-                            Whether celebrating a big birthday milestone or hosting an intimate dinner, 
-                            Willow Tree ensures our personalised and authentic approach each and every time. 
-                            Along with your vision and our expertise, we guarantee a bespoke experience exceeding all expectations, 
-                            leaving you free to enjoy every moment.
-                        </p>
+                       
                         <a class="button" href="#">
-                            Send an Enquiry
+                            Send an Enquiry 
                         </a>
                     </div>
                     
-                    <h2 class="services_title">
-                        Our Services
-                    </h2>
+                   
+                   
 
                     <div class="home_cards grid">
-                        
-
+                        <h2 class="services_title">
+                            Our Services
+                        </h2>
                         <article class="home_card">
-                            <img src="./images/wedding1/RandJFloral.jpg" alt="Private Celebrations" class="home_card-img">
-                            <h4 class="home_card-title">
-                                Private Celebrations
-                            </h4>
+                            <a href="weddings.html" class="home_card-link">
+                                <img src="./images/wedding1/RandJFloral.jpg" alt="Weddings" class="home_card-img">
+                                <h4 class="home_card-title">
+                                    Weddings
+                                </h4>
+                            </a>
+                            <div class="home_card-shadow"></div>
+                        </article>
+                        <article class="home_card">
+                            <a href="privatecelebrations.html" class="home_card-link">
+                                <img src="./images/Floral.JPG" alt="Private Celebrations" class="home_card-img">
+                                <h4 class="home_card-title">
+                                    Private Celebrations
+                                </h4>
+                            </a>
                             <div class="home_card-shadow"></div>
                         </article>
 
                         <article class="home_card">
-                            <img src="./images/TableFloral.jpg" alt="Brand & Product Launches" class="home_card-img">
-                            <h4 class="home_card-title">
-                                Brand & Product Launches
-                            </h4>
+                            <a href="corporateevents.html" class="home_card-link">
+                                <img src="./images/event1/Championofwomen230.JPG" alt="Corporate Events" class="home_card-img">
+                                <h4 class="home_card-title">
+                                    Corporate Events
+                                </h4>
+                            </a>
                             <div class="home_card-shadow"></div>
                         </article>
 
-                        <article class="home_card">
-                            <img src="./images/Floral.JPG" alt="Event Styling & Management" class="home_card-img">
-                            <h4 class="home_card-title">
-                                Event Styling & Management
-                            </h4>
+                        <!-- <article class="home_card">
+                            <a href="corporateevents.html" class="home_card-link">
+                                <img src="./images/wedding1/RandJFloral.jpg" alt="Brand Events" class="home_card-img">
+                                <h4 class="home_card-title">
+                                    Brand Events
+                                </h4>
+                            </a>
                             <div class="home_card-shadow"></div>
-                        </article>
+                        </article> -->
+
                     </div>
                 </div>
             </section>
 
-            <section class="testimonials section" is="testimonials">
-                <div class="testimonials_cards">
-                    <h2 class="testimonials_title">
-                        Testimonals
-                    </h2>
-                    
-                    <div class="testimonials-card">
-                        <h4 class="testimonials_name">
-                            Rhianna & Joseph's Wedding
-                        </h4>
-                        <p class="testimonials_description">
-                            “When it came to planning my wedding, I really had no idea where to start, all I knew was the sort of venue and flowers.
-                            Abi and her team at Willow Tree Events made the whole process so easy! Their organisation and attention to details are second to none.
-                            The whole day ran so smoothly and the vision really came to life. I wish I could do the day all over again.  We will definitely use Willow Tree Events for all our future events!”
-                        </p>
-                    </div>
+            <section class="testimonials section" id="testimonials">
+                <div class="testimonials_container container grid">
+                    <div class="testimonials_data">
+                        <h2 class="testimonials_title">
+                            Testimonals
+                        </h2>
+                        
+                        <div class="testimonials-card">
+                            <h4 class="testimonials_name">
+                                Rhianna & Joseph's Wedding
+                            </h4>
+                            <p class="testimonials_description">
+                                “When it came to planning my wedding, I really had no idea where to start, all I knew was the sort of venue and flowers.
+                                Abi and her team at Willow Tree Events made the whole process so easy! Their organisation and attention to details are second to none.
+                                The whole day ran so smoothly and the vision really came to life. I wish I could do the day all over again.  We will definitely use Willow Tree Events for all our future events!”
+                            </p>
+                        </div>
 
-                    <div class="testimonials-card">
-                        <h4 class="testimonials_name">
-                            Liam's Birthday Celebration
-                        </h4>
-                        <p class="testimonials_description">
-                            “Willow Tree Events turned my home into the perfect setting for my 70th birthday, creating a relaxed yet elegant atmosphere that was exactly what we envisioned. They made the entire process effortless, handling every detail with care and grace. It was a truly special with my family and friends.”
-                        </p>
-                    </div>
-                    <div class="testimonials-card">
-                        <h4 class="testimonials_name">
-                            Georgia & Joe's Wedding
-                        </h4>
-                        <p class="testimonials_description">
-                            “Abi made our special day absolutely unforgettable with their flawless attention to detail and creative vision. The team went above and beyond to ensure everything ran smoothly, allowing us to fully enjoy the moment. We couldn’t have asked for a better experience!”
-                        </p>
-                    </div>
-                    <div class="testimonials-card"> 
-                        <h4 class="testimonials_name">
-                            Champion of Women Awards
-                        </h4>
-                        <p class="testimonials_description">
-                            “Abi helped deliver an unforgettable afternoon at The Champion of Women Awards, seamlessly blending elegance and purpose to support Maggie's charity and The Felix Project. Handling everything from organizing the day to securing celebrity guests, performers, and amazing auction and raffle prizes. They expertly managed guest RSVPs and on-the-day logistics, ensuring a seamless and impactful experience. Thanks to their flawless planning, it was a day of empowerment and generosity that left a lasting impact on all who attended.”
-                        </p>
+                        <div class="testimonials-card">
+                            <h4 class="testimonials_name">
+                                Liam's Birthday Celebration
+                            </h4>
+                            <p class="testimonials_description">
+                                “Willow Tree Events turned my home into the perfect setting for my 70th birthday, creating a relaxed yet elegant atmosphere that was exactly what we envisioned. They made the entire process effortless, handling every detail with care and grace. It was a truly special with my family and friends.”
+                            </p>
+                        </div>
+                        <div class="testimonials-card">
+                            <h4 class="testimonials_name">
+                                Georgia & Joe's Wedding
+                            </h4>
+                            <p class="testimonials_description">
+                                “Abi made our special day absolutely unforgettable with their flawless attention to detail and creative vision. The team went above and beyond to ensure everything ran smoothly, allowing us to fully enjoy the moment. We couldn’t have asked for a better experience!”
+                            </p>
+                        </div>
+                        <div class="testimonials-card"> 
+                            <h4 class="testimonials_name">
+                                Champion of Women Awards
+                            </h4>
+                            <p class="testimonials_description">
+                                “Abi helped deliver an unforgettable afternoon at The Champion of Women Awards, seamlessly blending elegance and purpose to support Maggie's charity and The Felix Project. Handling everything from organizing the day to securing celebrity guests, performers, and amazing auction and raffle prizes. They expertly managed guest RSVPs and on-the-day logistics, ensuring a seamless and impactful experience. Thanks to their flawless planning, it was a day of empowerment and generosity that left a lasting impact on all who attended.”
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-
+        <footer class="footer">
+            <div class="footer_container container grid">
+                <div class="footer_content grid">
+                    <div>
+                        <a href="#" class="footer_logo">
+                            <img src="./images/logo/WillowTreeLogo_White_NoBackground.png" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="footer_data grid">
+                        <div>
+                            <h3 class="footer_title">Contact Us</h3>
+                            <ul class="footer_links">
+                                <li><a href="enquiries@willowtreeevents.co.uk">Email</a></li>
+                                <li><a href="">Send Enquiry</a></li>
+                            </ul>  
+                        </div>
+                        <div>
+                            <h3 class="footer_title">Support</h3>
+                            <ul class="footer_links">
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms & Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_group">  
+                        <div class="footer_social">     
+                            <a href="https://instagram.com/willowtreeevents.uk" target="_blank" class="footer_social_link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="footer_social_link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://pinterest.com" target="_blank" class="footer_social_link">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </div>
+                        <!-- <span class="footer_copy">&#169; Copyright WillowTreeEvents UK. All rights reserved.</span> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
         <script src="./main.js"></script>
             
     </body>

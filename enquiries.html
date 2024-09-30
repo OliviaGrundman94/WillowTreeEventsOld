@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header header-green" id="header">
+        <nav class="nav-green container">
+            <a href="index.html" class="nav_logo-green">
+                <img src="./images/logo/WillowTreeLogo_White_NoBackground.png" alt="Logo">
+            </a>
+            <div class="nav_menu-green" id="nav-menu-green">
+                <ul class="nav_list-green">
+                    <li class="nav_item-green"><a href="about.html" class="nav_link-green">About</a></li>
+                    <li class="nav_item-green dropdown-green">
+                        <a href="javascript:void(0)" class="nav_link-green dropbtn-green">Services</a>
+                        <div class="dropdown-content-green">
+                            <a href="weddings.html">Weddings</a>
+                            <a href="privatecelebrations.html">Private Celebrations</a>
+                            <a href="corporateevents.html">Corporate Events</a>
+                        </div>
+                    </li>
+                    <li class="nav_item-green"><a href="testimonials.html" class="nav_link-green">Testimonials</a></li>
+                    <li class="nav_item-green"><a href="enquiries.html" class="nav_link-green">Enquiries</a></li>
+                </ul>
+                <div class="nav_close-green" id="nav-close-green"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="nav_toggle-green" id="nav-toggle-green"><i class="fa-solid fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="enquiries_container">
+            <!-- <form class="form" action="https://formsubmit.co/enquiries@willowtreeevents.co.uk" method="POST"> -->
+             
+            <form class="form" action="https://formsubmit.co/240dbcb5dc14ad8c77ce553abae5b" method="POST">
+                <div class="form__title">Tell Us About Your Event</div>
+                <p class="form__desc">
+                    We're excited to help bring your vision to life! Whether you're planning a wedding, corporate event, or special celebration, we'd love to hear all about it. Fill out the form below and book a time for a Zoom consultation with one of our event specialists. Let's chat and start creating something unforgettable!
+                </p>
+                
+                <!-- Full Name Field -->
+                <div class="form__item">
+                    <!-- <label for="fullname" class="form__label">Full Name</label> -->
+                    <input type="text" class="form__input" name="fullname" id="fullname" placeholder="Full Name" required>
+                    <span class="form__error">Please enter your full name</span>
+                </div>
+                
+                <!-- Phone Number Field -->
+                <div class="form__item">
+                    <!-- <label for="phone" class="form__label">Phone Number</label> -->
+                    <input type="tel" class="form__input" name="phone" id="phone" placeholder="Phone Number" required>
+                    <span class="form__error">Please enter a valid phone number</span>
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form__item">
+                    <!-- <label for="email" class="form__label">Email</label> -->
+                    <input type="email" class="form__input" name="email" id="email" placeholder="Email Address" required>
+                    <span class="form__error">Please enter a valid email address</span>
+                </div>
+            
+                <!-- Event Message Field -->
+                <div class="form__item">
+                    <!-- <label for="message" class="form__label">Tell Us About Your Event</label> -->
+                    <textarea maxlength="500" class="form__input" name="message" id="message" placeholder="Tell us about your event" required></textarea>
+                    <span class="form__error">Please provide details about your event</span>
+                </div>
+            
+                <div>
+                    <input type="hidden" name="_subject" value="New Enquiry - YAS Bitch!!!">
+                    <input type="hidden" name="_next" value="https://willowtreeevents.co.uk/thankyou.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+                <!-- Submit Button -->
+                <div class="form__item">
+                    <button class="button" type="submit">Send Enquiry</button>
+                </div>
+            </form>
+            
+        </div>
+    </main>    
+        
+    <script src="./main.js"></script>
+
+</body>
+</html>
